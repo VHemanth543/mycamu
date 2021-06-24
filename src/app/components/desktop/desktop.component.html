@@ -1,0 +1,71 @@
+
+<!-- HEADER -->
+<div id="background-header">
+
+  <div id="camu-logo">
+    <img class="img" src="../assets/logo.png">
+  </div>
+
+  <div id="student-name">
+    <mat-label  class="name"> {{name}} </mat-label>
+
+    <img class="acc-logo" src="../assets/account-logo.png">
+  </div>
+
+</div>
+
+<!-- BODY-->
+<div id="background-body">
+
+
+  <!-- SIDE BAR -->
+  <div id="sidebar">
+
+    <!-- COLLEGE LOGO-->
+    <div id="college-logo">
+      <img  class="img1" src="../assets/college-logo.png">
+    </div>
+
+    <!-- NAV-BAR LIST-->
+    <div id="sidebar-items" >
+
+      <mat-selection-list #shoes (selectionChange)="change(shoes.selectedOptions)"  [multiple]="false">
+
+        <mat-list-option *ngFor="let item of List"  [value]="item.name" selection="selected">
+          <mat-icon  mat-list-icon> {{item.icon}} </mat-icon>
+            <div> {{item.name}} </div>
+        </mat-list-option>
+      </mat-selection-list>
+    </div>
+
+  </div>
+
+  <div id="content">
+    <div >
+      <ng-container *ngComponentOutlet="component"></ng-container>
+
+    </div>
+
+  </div>
+
+  <div id="adds">
+      <mat-card>
+        <mat-card-header>
+          <mat-icon>volume_up</mat-icon>
+
+          <mat-card-title>Announcement</mat-card-title>
+          <mat-divider></mat-divider>
+        </mat-card-header>
+        <mat-card-content>No new Announcements found</mat-card-content>
+      </mat-card>
+
+      <mat-card>
+        <mat-card-header>
+          <mat-icon>description</mat-icon>
+          <mat-card-title>Progress Report</mat-card-title>
+          <mat-divider></mat-divider>
+        </mat-card-header>
+        <mat-card-content>No Reports were found</mat-card-content>
+      </mat-card>
+  </div>
+</div>

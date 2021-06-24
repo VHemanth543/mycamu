@@ -1,0 +1,89 @@
+<p>my-institute works!</p>
+
+<mat-card>
+  <mat-card-header>
+
+    <mat-card-title><p>--OUR VISION--</p></mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      "Lead the transformation of engineering and management learning experience to educate the next generation of innovators and entrepreneurs who want to make the world a better place."
+
+    </p>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-header>
+
+    <mat-card-title><p>--OUR MISSION--</p></mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      "– To develop the required resources and infrastructure and to establish a conducive ambience for the teaching-learning process.<br><br>
+
+      – To nurture professional and ethical values in the students and to instil in them a spirit of innovation and entrepreneurship.<br><br>
+
+      – To encourage a desire for higher learning and research in the students and to equip them to face global challenges.<br><br>
+
+      – To provide opportunities for students to learn job-relevant skills to make them industry ready.<br><br>
+
+      – To interact with industries and other organisations to facilitate transfer of knowledge and know-how."<br><br>
+    </p>
+  </mat-card-content>
+</mat-card>
+
+<mat-tab-group>
+  <mat-tab label="CIRCULAR">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="CATEGORY">
+        <th mat-header-cell *matHeaderCellDef> CATEGORY </th>
+        <td mat-cell *matCellDef="let element"> {{element.category}} </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="NAME">
+        <th mat-header-cell *matHeaderCellDef> NAME </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="ATTACHMENT">
+        <th mat-header-cell *matHeaderCellDef> ATTACHMENT </th>
+        <td mat-cell *matCellDef="let element"> <a [href]="element.attachment"> {{element.LinkName}} </a>  </td>
+      </ng-container>
+
+
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+  </mat-tab>
+
+
+  <mat-tab label="NOTICE BOARD">
+     Content 2
+
+  </mat-tab>
+
+
+  <mat-tab label="CURICULAM & SYLLABUS">
+     Content 3
+
+  </mat-tab>
+
+
+  <mat-tab label="POLICES & REGULATIONS">
+
+    Content 4
+
+  </mat-tab>
+</mat-tab-group>
+
+
