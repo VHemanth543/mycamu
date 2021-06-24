@@ -1,0 +1,21 @@
+p{
+  border: 1px solid blue;
+  color : blue;
+
+}
+
+#container{
+  height : 5vh;
+
+  display : flex;
+  flex-direction : row;
+  #d1{
+    flex-basis: 25%;
+  }
+  #d2{
+    flex-basis: 50%;
+  }
+  #button{
+    flex-basis: 25%;
+  }
+}
