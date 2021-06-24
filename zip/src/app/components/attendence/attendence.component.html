@@ -1,0 +1,33 @@
+<p>attendence works!</p>
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>ATTENDANCE % / 2020-21</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-tab-group >
+      <mat-tab label="SUBJECT-WISE" >
+        <p>
+          <mat-icon>info</mat-icon> no subject wise log found
+        </p>
+      </mat-tab>
+      <mat-tab label="ABSENCE LOG">
+        <p>
+          <mat-icon>info</mat-icon> no subject wise log found
+        </p>
+
+      </mat-tab>
+      <mat-tab label="PRESENT">
+        <mat-progress-spinner
+            mode="determinate"
+            [value]="progress"
+            color="blue">
+
+            {{progress}}
+
+        </mat-progress-spinner>
+      </mat-tab>
+      <mat-tab label="OVERALL"> Content 4 </mat-tab>
+    </mat-tab-group>
+  </mat-card-content>
+</mat-card>
